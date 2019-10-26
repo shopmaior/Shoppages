@@ -3,9 +3,9 @@
 'use strict';
 const program = require('commander');
 const inquirer = require('inquirer');
-const colors = require('colors');
+const chalk = require('chalk');
 const figlet = require('figlet');
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 /*******************************************/
@@ -24,9 +24,13 @@ function normalizeSlug(slug) {
 
 program.version('0.0.1');
 
+let projectName;
+
 program
   console.log(
-    figlet.textSync('Shoppages', { horizontalLayout: 'full' })
+    chalk.blue(
+      figlet.textSync('Shoppages', { horizontalLayout: 'full' })
+    )
   );
   console.log("\n");
 
@@ -75,13 +79,17 @@ program
     .then(answers => {
       console.log(JSON.stringify(answers, null, '  '));
 
-      // Cria diretório
+      // Copia CLA_TEMPLATE
       const PAGES_PATH = path.resolve(__dirname, '..', 'src', 'pages');
-      const page_path = path.resolve(PAGES_PATH, answers.page_slug);
-      // console.log(page_path);
-      fs.mkdir(page_path, { recursive: true }, (err) => {
-        if (err) throw err;
-      });
+      const model_page = path.resolve(PAGES_PATH, 'acme');
+      const new_page = path.resolve(PAGES_PATH, answers.page_slug);
+      
+      try {
+        fs.copySync(model_page, new_page)
+        console.log('success!')
+      } catch (err) {
+        console.error(err)
+      }
     });
 
 
