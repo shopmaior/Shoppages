@@ -2,14 +2,22 @@
   "name": "businesspage",
   "version": "1.0.0",
   "main": "index.js",
+  "bin": {
+    "create-page": "./bin/index.js"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "create-page": "node ./bin/index.js"
   },
   "dependencies": {
     "@types/react": "^16.9.9",
     "@zeit/next-typescript": "^1.1.1",
+    "colors": "^1.4.0",
+    "commander": "^3.0.2",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.0",
     "jquery": "^3.4.1",
     "next": "^9.1.1",
     "react": "^16.11.0",
