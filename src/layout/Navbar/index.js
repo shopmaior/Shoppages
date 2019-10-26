@@ -24,18 +24,18 @@ const navItemsDefault = [
   }
 ]
 
-const NavbarComponent = ({config, navBarApparence, navItems = navItemsDefault}) => {
+const NavbarComponent = ({config, navBarAppearance, navItems = navItemsDefault}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <Navbar 
-      color={navBarApparence.style} 
-      light={navBarApparence.style == 'light'} 
-      dark={navBarApparence.style == 'dark'} 
-      fixed={navBarApparence.fixed} 
-      sticky={navBarApparence.sticky} 
+      color={navBarAppearance.style} 
+      light={navBarAppearance.style == 'light'} 
+      dark={navBarAppearance.style == 'dark'} 
+      fixed={navBarAppearance.fixed} 
+      sticky={navBarAppearance.sticky} 
       expand="md"
       >
       <Container>

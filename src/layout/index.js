@@ -21,40 +21,6 @@ export default ({ children, dataPage, config, navItems }) => (
 
     {children}
 
-    <section id="about">
-      <Container>
-        <Row>
-          <Col lg="8" className="mx-auto">
-            <h2>About this page</h2>
-            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-
-    <section id="services" className="bg-light">
-      <Container>
-        <Row>
-          <Col lg="8" className="mx-auto">
-            <h2>Services we offer</h2>
-            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-
-    <section id="contact">
-      <Container>
-        <Row>
-          <Col lg="8" className="mx-auto">
-            <h2>Contact us</h2>
-            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-
-    <Footer dataPage={dataPage} />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </div>
 )
