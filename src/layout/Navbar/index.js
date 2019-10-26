@@ -24,15 +24,22 @@ const navItemsDefault = [
   }
 ]
 
-const NavbarComponent = ({title, navItems = navItemsDefault}) => {
+const NavbarComponent = ({config, navBarApparence, navItems = navItemsDefault}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md">
+    <Navbar 
+      color={navBarApparence.style} 
+      light={navBarApparence.style == 'light'} 
+      dark={navBarApparence.style == 'dark'} 
+      fixed={navBarApparence.fixed} 
+      sticky={navBarApparence.sticky} 
+      expand="md"
+      >
       <Container>
-        <NavbarBrand href="/">{title}</NavbarBrand>
+        <NavbarBrand href="/">{config.page_name}</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>

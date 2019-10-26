@@ -3,10 +3,11 @@ import Head from 'next/head'
 
 import { Container, Row, Col } from 'reactstrap';
 import Navbar from './Navbar';
+import Header from './Header';
 import Footer from './Footer';
 
 // Estudar como usar PropTypes
-export default ({ children, dataPage, navItems }) => (
+export default ({ children, dataPage, config, navItems }) => (
   <div>
     <Head>
       <title>{dataPage.name ? dataPage.name : 'Brand'}</title>
@@ -15,13 +16,8 @@ export default ({ children, dataPage, navItems }) => (
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
       <link rel="stylesheet" href="https://blackrockdigital.github.io/startbootstrap-scrolling-nav/css/scrolling-nav.css" crossorigin="anonymous" />
     </Head>
-    <Navbar title={dataPage.name ? dataPage.name : 'Brand'} navItems={navItems} />
-    <header className="bg-primary text-white">
-      <Container className="text-center">
-        <h1>Welcome to Scrolling Nav</h1>
-        <p className="lead">A landing page template freshly redesigned for Bootstrap 4</p>
-      </Container>
-    </header>
+    {/* <Navbar title={dataPage.name ? dataPage.name : 'Brand'} navItems={navItems} />
+    <Header {...config} /> */}
 
     {children}
 
@@ -30,7 +26,7 @@ export default ({ children, dataPage, navItems }) => (
         <Row>
           <Col lg="8" className="mx-auto">
             <h2>About this page</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
           </Col>
         </Row>
       </Container>
@@ -41,7 +37,7 @@ export default ({ children, dataPage, navItems }) => (
         <Row>
           <Col lg="8" className="mx-auto">
             <h2>Services we offer</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
           </Col>
         </Row>
       </Container>
@@ -52,7 +48,7 @@ export default ({ children, dataPage, navItems }) => (
         <Row>
           <Col lg="8" className="mx-auto">
             <h2>Contact us</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+            <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
           </Col>
         </Row>
       </Container>
