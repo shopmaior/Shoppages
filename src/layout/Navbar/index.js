@@ -39,7 +39,7 @@ const NavbarComponent = ({config, navBarAppearance, navItems = navItemsDefault})
       expand="md"
       >
       <Container>
-        <NavbarBrand href="/">{config.page_name}</NavbarBrand>
+        <NavbarBrand href={`/${config.page_slug}`}>{config.page_name}</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
